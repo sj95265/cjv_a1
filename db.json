@@ -1,0 +1,22 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "title": "Inception",
+        "poster": "link_to_inception_poster",
+        "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+        "rentPrice": 3.99,
+        "buyPrice": 12.99
+      }
+    ],
+    "tvShows": [
+      {
+        "id": 1,
+        "title": "Breaking Bad",
+        "poster": "link_to_breaking_bad_poster",
+        "synopsis": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student.",
+        "rentPrice": 2.99,
+        "buyPrice": 9.99
+      }
+    ]
+  }
