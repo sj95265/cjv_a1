@@ -1,22 +1,39 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
+import { useDisclosure } from '@chakra-ui/react';
 import HomePage from './pages/HomePage';
 import MoviesListingPage from './pages/MoviesListingPage';
 import MovieDetailsPage from './pages/MovieDetailsPage';
-import RegistrationPage from './pages/RegistrationPage';
-import LoginPage from './pages/LoginPage';
+import TVShowsListingPage from './pages/TVShowsListingPage';
+import TVShowDetailsPage from './pages/TVShowDetailsPage';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import RegisterModal from './components/RegisterModal';
+import LoginModal from './components/LoginModal';
 
 function App() {
+  const { isOpen: isRegisterOpen, onOpen: onOpenRegister, onClose: onCloseRegister } = useDisclosure();
+  const { isOpen: isLoginOpen, onOpen: onOpenLogin, onClose: onCloseLogin } = useDisclosure();
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movies" element={<MoviesListingPage />} />
-        <Route path="/movies/:id" element={<MovieDetailsPage />} />
-        <Route path="/register" element={<RegistrationPage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
-    </Router>
+    <ChakraProvider>
+      <Router>
+        <Header onOpenLogin={onOpenLogin} onOpenRegister={onOpenRegister} />
+        <div style={{ paddingTop: '80px' }}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/movies" element={<MoviesListingPage />} />
+            <Route path="/tvShows" element={<TVShowsListingPage />} />
+            <Route path="/movies/:id" element={<MovieDetailsPage />} />
+            <Route path="/tvShows/:id" element={<TVShowDetailsPage />} />
+          </Routes>
+        </div>
+        <RegisterModal isOpen={isRegisterOpen} onClose={onCloseRegister} />
+        <LoginModal isOpen={isLoginOpen} onClose={onCloseLogin} />
+        <Footer />
+      </Router>
+    </ChakraProvider>
   );
 }
 
