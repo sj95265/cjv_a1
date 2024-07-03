@@ -20,9 +20,8 @@ const NavigationBar = ({ onOpenLogin, onOpenRegister }) => (
                 <Menu>
                     <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" bg="white" />
                     <MenuList bg="white" color="black">
-                        <MenuItem as={Link} to="/">Home</MenuItem>
                         <MenuItem as={Link} to="/movies">Movies</MenuItem>
-                        <MenuItem as={Link} to="/">Home</MenuItem>
+                        <MenuItem as={Link} to="/tvShows">TVShows</MenuItem>
                         <MenuItem onClick={onOpenRegister}>Register</MenuItem>
                         <MenuItem onClick={onOpenLogin}>Login</MenuItem>
                     </MenuList>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Heading, Grid, GridItem, Text, Image } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const MoviesListingPage = () => {
   const [movies, setMovies] = useState([]);
@@ -22,21 +23,23 @@ const MoviesListingPage = () => {
       <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={6}>
         {movies.map(movie => (
           <GridItem key={movie.id}>
-            <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
-              <Image src={movie.poster} alt={movie.title} />
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Text fontWeight="semibold" fontSize="xl" lineHeight="short">
-                    {movie.title}
-                  </Text>
-                </Box>
-                <Box mt="1" lineHeight="tight">
-                  <Text>{movie.synopsis}</Text>
-                  <Text>Rent Price: ${movie.rentPrice}</Text>
-                  <Text>Buy Price: ${movie.buyPrice}</Text>
+            <Link to={`/movies/${movie.id}`}>
+              <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
+                <Image src={movie.poster} alt={movie.title} />
+                <Box p="6">
+                  <Box d="flex" alignItems="baseline">
+                    <Text fontWeight="semibold" fontSize="xl" lineHeight="short">
+                      {movie.title}
+                    </Text>
+                  </Box>
+                  <Box mt="1" lineHeight="tight">
+                    <Text>{movie.synopsis}</Text>
+                    <Text>Rent Price: ${movie.rentPrice}</Text>
+                    <Text>Buy Price: ${movie.buyPrice}</Text>
+                  </Box>
                 </Box>
               </Box>
-            </Box>
+            </Link>
           </GridItem>
         ))}
       </Grid>
