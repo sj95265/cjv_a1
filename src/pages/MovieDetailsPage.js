@@ -7,14 +7,20 @@ const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/movies/${id}`)
+    fetch(`http://localhost:3001/movies/?id=${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         return response.json();
       })
-      .then(data => setMovie(data))
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          setMovie(data[0]);
+        } else {
+          throw new Error('Movie not found');
+        }
+      })
       .catch(error => console.error('Error fetching movie:', error));
   }, [id]);
 
@@ -25,7 +31,7 @@ const MovieDetailsPage = () => {
   return (
     <Box p={4}>
       <Heading as="h1" size="xl" mb={4}>{movie.title}</Heading>
-      <Image src={movie.largePoster} alt={movie.title} />
+      <Image src={movie.poster} alt={movie.title} />
       <Text>{movie.synopsis}</Text>
       <Text>Rent Price: ${movie.rentPrice}</Text>
       <Text>Buy Price: ${movie.buyPrice}</Text>

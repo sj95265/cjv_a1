@@ -7,14 +7,20 @@ const TVShowDetailsPage = () => {
   const [tvShow, setTVShow] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/tvShows/${id}`)
+    fetch(`http://localhost:3001/tvShows/?id=${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         return response.json();
       })
-      .then(data => setTVShow(data))
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          setTVShow(data[0]);
+        } else {
+          throw new Error('TVShow not found');
+        }
+      })
       .catch(error => console.error('Error fetching TV show:', error));
   }, [id]);
 
