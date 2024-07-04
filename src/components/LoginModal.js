@@ -16,7 +16,7 @@ import {
 const LoginModal = ({ isOpen, onClose }) => (
   <Modal isOpen={isOpen} onClose={onClose}>
     <ModalOverlay />
-    <ModalContent>
+    <ModalContent color="black">
       <ModalHeader>Login</ModalHeader>
       <ModalCloseButton />
       <ModalBody>

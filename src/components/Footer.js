@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Text, Link } from '@chakra-ui/react';
 
 const Footer = () => (
-  <Box as="footer" bg="teal.500" color="white" p={4} mt={8}>
+  <Box as="footer" bg="gray.900" color="white" p={4} mt={8}>
     <Flex justify="space-between" align="center" maxW="1200px" mx="auto">
       <Text>&copy; 2024 Digital Video Store. All rights reserved.</Text>
       <Flex>

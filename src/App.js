@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
 import HomePage from './pages/HomePage';
 import MoviesListingPage from './pages/MoviesListingPage';
@@ -12,12 +12,24 @@ import Footer from './components/Footer';
 import RegisterModal from './components/RegisterModal';
 import LoginModal from './components/LoginModal';
 
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: 'black', // Set background color for the entire site
+        color: 'white', // Set text color for the entire site
+      },
+    },
+  },
+});
+
+
 function App() {
   const { isOpen: isRegisterOpen, onOpen: onOpenRegister, onClose: onCloseRegister } = useDisclosure();
   const { isOpen: isLoginOpen, onOpen: onOpenLogin, onClose: onCloseLogin } = useDisclosure();
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Router>
         <Header onOpenLogin={onOpenLogin} onOpenRegister={onOpenRegister} />
         <div style={{ paddingTop: '80px' }}>

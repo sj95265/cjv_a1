@@ -7,11 +7,11 @@ const NavigationBar = ({ onOpenLogin, onOpenRegister }) => (
     <div style={{ height: '100%', width: '100%' }}>
         <Box display={{ base: 'none', md: 'block' }}>
             <HStack>
-                <Button as={Link} to="/movies" bg="teal.500">Movies</Button>
-                <Button as={Link} to="/tvShows" bg="teal.500">TVShows</Button>
+                <Button as={Link} to="/movies" bg="transparent">Movies</Button>
+                <Button as={Link} to="/tvShows" bg="transparent">TVShows</Button>
                 <Spacer />
-                <Button onClick={onOpenRegister} bg="teal.500">Register</Button>
-                <Button onClick={onOpenLogin} bg="teal.500">Login</Button>
+                <Button onClick={onOpenRegister} bg="transparent">Register</Button>
+                <Button onClick={onOpenLogin} bg="transparent">Login</Button>
             </HStack>
         </Box>
         <Box display={{ base: 'block', md: 'none' }}>
