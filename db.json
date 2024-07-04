@@ -19,83 +19,219 @@
   "movies": [
     {
       "id": 1,
-      "title": "Inception",
-      "poster": "link_to_inception_poster",
-      "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "title": "Dune",
+      "synopsis": "In the distant future, a noble family becomes embroiled in a conflict that spans generations on the desert planet Arrakis.",
+      "smallPoster": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg",
+      "largePoster": "/dune-large.jpg",
       "rentPrice": 3.99,
       "buyPrice": 12.99
     },
     {
       "id": 2,
-      "title": "BBBBB",
-      "poster": "link_to_inception_poster",
-      "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-      "rentPrice": 3.99,
-      "buyPrice": 12.99
+      "title": "Spider-Man: No Way Home",
+      "synopsis": "Peter Parker's world changes when Doctor Strange's spell goes awry, bringing villains from other realities into his own.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UX1000_.jpg",
+      "largePoster": "/spiderman-large.jpg",
+      "rentPrice": 4.99,
+      "buyPrice": 14.99
     },
     {
       "id": 3,
-      "title": "CCCCC",
-      "poster": "link_to_inception_poster",
-      "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "title": "The Batman",
+      "synopsis": "In Gotham City, a mysterious vigilante known as Batman sets out to uncover the truth about his past, while facing a new threat from the Riddler.",
+      "smallPoster": "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/The_Batman_%28film%29_poster.jpg/220px-The_Batman_%28film%29_poster.jpg",
+      "largePoster": "/batman-large.jpg",
       "rentPrice": 3.99,
       "buyPrice": 12.99
     },
     {
       "id": 4,
-      "title": "DDDDD",
-      "poster": "link_to_inception_poster",
-      "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "title": "No Time to Die",
+      "synopsis": "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BYWQ2NzQ1NjktMzNkNS00MGY1LTgwMmMtYTllYTI5YzNmMmE0XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg",
+      "largePoster": "/notime-to-die-large.jpg",
+      "rentPrice": 4.99,
+      "buyPrice": 14.99
+    },
+    {
+      "id": 5,
+      "title": "Top Gun: Maverick",
+      "synopsis": "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+      "largePoster": "/topgun-maverick-large.jpg",
       "rentPrice": 3.99,
       "buyPrice": 12.99
     },
     {
-      "id": 5,
-      "title": "EEEEE",
-      "poster": "link_to_inception_poster",
-      "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "id": 6,
+      "title": "Encanto",
+      "synopsis": "A Colombian girl has to face the frustration of being the only member of her family without magical powers.",
+      "smallPoster": "https://lumiere-a.akamaihd.net/v1/images/p_encanto_homeent_22359_4892ae1c.jpeg",
+      "largePoster": "/encanto-large.jpg",
       "rentPrice": 3.99,
       "buyPrice": 12.99
+    },
+    {
+      "id": 7,
+      "title": "The Power of the Dog",
+      "synopsis": "Charismatic rancher Phil Burbank inspires fear and awe in those around him. When his brother brings home a new wife and her son, Phil torments them until he finds himself exposed to the possibility of love.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BZGRhYjE2NWUtN2FkNy00NGI3LTkxYWMtMDk4Yjg5ZjI3MWI2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+      "largePoster": "/powerofdog-large.jpg",
+      "rentPrice": 4.99,
+      "buyPrice": 14.99
+    },
+    {
+      "id": 8,
+      "title": "Don't Look Up",
+      "synopsis": "Two low-level astronomers must go on a giant media tour to warn mankind of an approaching comet that will destroy planet Earth.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BZjcwZjY3NjAtNzkxZS00NmFjLTg1OGYtODJmMThhY2UwMTc5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
+      "largePoster": "/dontlookup-large.jpg",
+      "rentPrice": 3.99,
+      "buyPrice": 12.99
+    },
+    {
+      "id": 9,
+      "title": "Everything Everywhere All at Once",
+      "synopsis": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save the world by exploring other universes connecting with the lives she could have led.",
+      "smallPoster": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Everything_Everywhere_All_at_Once.jpg/220px-Everything_Everywhere_All_at_Once.jpg",
+      "largePoster": "/everythingeverywhere-large.jpg",
+      "rentPrice": 4.99,
+      "buyPrice": 14.99
+    },
+    {
+      "id": 10,
+      "title": "Black Panther: Wakanda Forever",
+      "synopsis": "The sequel to Black Panther (2018) continues the journey of King T'Challa and the exploration of the world of Wakanda.",
+      "smallPoster": "https://lumiere-a.akamaihd.net/v1/images/pp_disney_blackpanther_wakandaforever_1289_d3419b8f.jpeg",
+      "largePoster": "/blackpanther2-large.jpg",
+      "rentPrice": 3.99,
+      "buyPrice": 12.99
+    },
+    {
+      "id": 11,
+      "title": "Elvis",
+      "synopsis": "A look at the life of the legendary rock and roll star, Elvis Presley.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BYzMzNTJjYmMtZTkxNS00MjI4LWI3YmQtOTQ4MDZjZDJlZjQyXkEyXkFqcGdeQXVyNjc0NzQzNTM@._V1_.jpg",
+      "largePoster": "/elvis-large.jpg",
+      "rentPrice": 3.99,
+      "buyPrice": 12.99
+    },
+    {
+      "id": 12,
+      "title": "Avatar: The Way of Water",
+      "synopsis": "Sequel to Avatar (2009), continuing the journey of the Na'vi and their new challenges in Pandora.",
+      "smallPoster": "https://m.media-amazon.com/images/I/71s3cEqEZTL._AC_UF894,1000_QL80_.jpg",
+      "largePoster": "/avatar2-large.jpg",
+      "rentPrice": 4.99,
+      "buyPrice": 14.99
     }
   ],
   "tvShows": [
     {
       "id": 1,
-      "title": "Breaking Bad",
-      "poster": "link_to_breaking_bad_poster",
-      "synopsis": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student.",
+      "title": "Game of Thrones",
+      "synopsis": "A tale of power, betrayal, and dragons in the fictional continents of Westeros and Essos.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
+      "largePoster": "/game-of-thrones-large.jpg",
       "rentPrice": 2.99,
       "buyPrice": 9.99
     },
     {
       "id": 2,
-      "title": "BBBBB",
-      "poster": "link_to_breaking_bad_poster",
-      "synopsis": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student.",
+      "title": "Breaking Bad",
+      "synopsis": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student to build a drug empire.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg",
+      "largePoster": "/breaking-bad-large.jpg",
       "rentPrice": 2.99,
       "buyPrice": 9.99
     },
     {
       "id": 3,
-      "title": "CCCCC",
-      "poster": "link_to_breaking_bad_poster",
-      "synopsis": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student.",
+      "title": "The Mandalorian",
+      "synopsis": "A lone bounty hunter navigates the outer reaches of the galaxy after the fall of the Empire.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BN2M5YWFjN2YtYzU2YS00NzBlLTgwZWUtYWQzNWFhNDkyYjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
+      "largePoster": "/mandalorian-large.jpg",
       "rentPrice": 2.99,
       "buyPrice": 9.99
     },
     {
       "id": 4,
-      "title": "DDDDD",
-      "poster": "link_to_breaking_bad_poster",
-      "synopsis": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student.",
+      "title": "The Crown",
+      "synopsis": "The political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.",
+      "smallPoster": "https://resizing.flixster.com/RP3j3n-BxdE97pIJiBK5DG3PniY=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13398828_b_v9_aa.jpg",
+      "largePoster": "/the-crown-large.jpg",
       "rentPrice": 2.99,
       "buyPrice": 9.99
     },
     {
       "id": 5,
-      "title": "EEEEE",
-      "poster": "link_to_breaking_bad_poster",
-      "synopsis": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student.",
+      "title": "Sherlock",
+      "synopsis": "Modern-day adaptation of Arthur Conan Doyle's Sherlock Holmes stories.",
+      "smallPoster": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10406404_b_v13_ab.jpg",
+      "largePoster": "/sherlock-large.jpg",
+      "rentPrice": 2.99,
+      "buyPrice": 9.99
+    },
+    {
+      "id": 6,
+      "title": "The Witcher",
+      "synopsis": "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+      "smallPoster": "https://resizing.flixster.com/a1JYG_ltQ5bCPG9pF5d61WEdPM4=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p17580186_i_v13_ac.jpg",
+      "largePoster": "/witcher-large.jpg",
+      "rentPrice": 2.99,
+      "buyPrice": 9.99
+    },
+    {
+      "id": 7,
+      "title": "Friends",
+      "synopsis": "Follows the lives of six friends living in New York City as they navigate through love and life.",
+      "smallPoster": "https://static.tvtropes.org/pmwiki/pub/images/rp16851_friends_apartment_6.jpg",
+      "largePoster": "/friends-large.jpg",
+      "rentPrice": 2.99,
+      "buyPrice": 9.99
+    },
+    {
+      "id": 8,
+      "title": "Peaky Blinders",
+      "synopsis": "A gangster family epic set in Birmingham, England, in the aftermath of World War I.",
+      "smallPoster": "https://cdn.kinocheck.com/i/x00ogjwtdf.jpg",
+      "largePoster": "/peaky-blinders-large.jpg",
+      "rentPrice": 2.99,
+      "buyPrice": 9.99
+    },
+    {
+      "id": 9,
+      "title": "The Office",
+      "synopsis": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg",
+      "largePoster": "/the-office-large.jpg",
+      "rentPrice": 2.99,
+      "buyPrice": 9.99
+    },
+    {
+      "id": 10,
+      "title": "The Boys",
+      "synopsis": "A group of vigilantes set out to take down corrupt superheroes who abuse their superpowers.",
+      "smallPoster": "https://upload.wikimedia.org/wikipedia/en/f/f6/The_Boys_Season_1.jpg",
+      "largePoster": "/the-boys-large.jpg",
+      "rentPrice": 2.99,
+      "buyPrice": 9.99
+    },
+    {
+      "id": 11,
+      "title": "Stranger Things",
+      "synopsis": "A group of kids uncover supernatural mysteries in their small town.",
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BMDRjYWI5NTMtZTYzZC00NTg4LWI3NjMtNmI3MTdhMWQ5MGJlXkEyXkFqcGdeQXVyNTg4MDc4Mg@@._V1_.jpg",
+      "largePoster": "/stranger-things-large.jpg",
+      "rentPrice": 2.99,
+      "buyPrice": 9.99
+    },
+    {
+      "id": 12,
+      "title": "Westworld",
+      "synopsis": "A dark odyssey about the dawn of artificial consciousness and the evolution of sin in a world where every human appetite can be indulged.",
+      "smallPoster": "https://upload.wikimedia.org/wikipedia/en/2/28/Westworld_season_1.png",
+      "largePoster": "/westworld-large.jpg",
       "rentPrice": 2.99,
       "buyPrice": 9.99
     }
