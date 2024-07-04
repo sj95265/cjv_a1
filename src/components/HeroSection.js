@@ -1,29 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Heading, Image } from '@chakra-ui/react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const HeroSection = () => {
-  const [movies, setMovies] = useState([]);
+  const [heroes, setHeroes] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0); // State to track current slide index
 
   useEffect(() => {
-    fetch('http://localhost:3001/movies')
+    fetch('http://localhost:3001/heroes')
       .then(response => response.json())
-      .then(data => setMovies(data));
+      .then(data => setHeroes(data));
   }, []);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    arrows: false,
+    // draggable: false,
+    pauseOnHover: false,
+    autoplay: true,
+    // speed: 1000,
+    autoplaySpeed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    afterChange: (current) => setCurrentSlide(current), // Update current slide index
+    customPaging: function (i) {
+      return (
+        <Box
+          key={i}
+          style={{
+            width: "30px",
+            height: "10px",
+            backgroundColor: i === currentSlide ? "white" : "gray",
+            borderRadius: "5px",
+            margin: "5px 5px"
+          }}
+        />
+      );
+    }
+  };
+
   return (
-    <Box>
-      <Heading as="h2" size="lg" mb={4}>Most Demanded Movies</Heading>
-      <Box display="flex" flexWrap="wrap">
-        {movies.map(movie => (
-          <Box key={movie.id} p={4} width="25%">
-            <Image src={movie.poster} alt={movie.title} />
-            <Heading as="h3" size="md" mt={2}>{movie.title}</Heading>
-            <Text>{movie.synopsis}</Text>
-            <Text>Rent Price: ${movie.rentPrice}</Text>
-            <Text>Buy Price: ${movie.buyPrice}</Text>
+    <Box p={5}>
+      <Heading as="h2" size="lg" mb={4}>Most Demanded</Heading>
+      <Slider {...settings}>
+        {heroes.map(hero => (
+          <Box key={hero.id} h={{ base: '100%', md: '500px' }} position="relative">
+            <Box
+              position="absolute"
+              top="0"
+              left="0"
+              right="0"
+              bottom="0"
+              bgImage={`url(${hero.poster})`}
+              bgSize="cover"
+              filter="blur(10px)"
+              zIndex="-1"
+            />
+            <Image src={hero.poster} alt={hero.id} h="100%" w="100%" objectFit="contain" display="flex" alignItems="center" />
           </Box>
         ))}
-      </Box>
+      </Slider>
     </Box>
   );
 };

@@ -8,7 +8,7 @@ import ContentSection from '../components/ContentSection';
 const HomePage = () => {
     return (
         <Container maxW="container.2xl" h="100%">
-            {/* <HeroSection /> */}
+            <HeroSection />
             <FeaturedMovies />
             <FeaturedTVShows />
             <ContentSection />
