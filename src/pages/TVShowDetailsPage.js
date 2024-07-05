@@ -7,7 +7,7 @@ const TVShowDetailsPage = () => {
   const [tvShow, setTVShow] = useState(null);
 
   useEffect(() => {
-    fetch(`https://json-server-vercel-6dx0dcw1z-leos-projects-d449feca.vercel.app/tvShows/?id=${id}`)
+    fetch(`https://json-server-vercel-mu-sable.vercel.app/tvShows/?id=${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
