@@ -7,7 +7,7 @@ const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/movies/?id=${id}`)
+    fetch(`https://json-server-vercel-6dx0dcw1z-leos-projects-d449feca.vercel.app/movies/?id=${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

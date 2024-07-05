@@ -9,7 +9,7 @@ const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0); // State to track current slide index
 
   useEffect(() => {
-    fetch('http://localhost:3001/heroes')
+    fetch('https://json-server-vercel-6dx0dcw1z-leos-projects-d449feca.vercel.app/heroes')
       .then(response => response.json())
       .then(data => setHeroes(data));
   }, []);

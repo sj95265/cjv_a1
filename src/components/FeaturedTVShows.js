@@ -9,7 +9,7 @@ const FeaturedTVShows = () => {
     const fetchData = () => {
       const ids = [1, 2, 3, 4, 5];
       const promises = ids.map(id =>
-        fetch(`http://localhost:3001/tvShows/?id=${id}`)
+        fetch(`https://json-server-vercel-6dx0dcw1z-leos-projects-d449feca.vercel.app/tvShows/?id=${id}`)
           .then(response => {
             if (!response.ok) {
               throw new Error(`Request for tvShow ${id} failed`);

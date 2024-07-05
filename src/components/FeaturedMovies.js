@@ -9,7 +9,7 @@ const FeaturedMovies = () => {
     const fetchData = () => {
       const ids = [1, 2, 3, 4, 5];
       const promises = ids.map(id =>
-        fetch(`http://localhost:3001/movies/?id=${id}`)
+        fetch(`https://json-server-vercel-mu-sable.vercel.app/movies/?id=${id}`)
           .then(response => {
             if (!response.ok) {
               throw new Error(`Request for movie ${id} failed`);
