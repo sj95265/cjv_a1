@@ -38,18 +38,9 @@ const FeaturedMovies = () => {
             <Link to={`/movies/${movie.id}`}>
               <Box borderWidth="1px" borderRadius="lg" overflow="hidden" h="100%">
                 <Image src={movie.smallPoster} alt={movie.title} w="100%" h="90%" objectFit="cover" />
-                {/* <Box p="6"> */}
-                {/* <Box d="flex" alignItems="baseline"> */}
                 <Text textAlign="center" noOfLines={1} fontWeight="semibold" fontSize="xl" lineHeight="short">
                   {movie.title}
                 </Text>
-                {/* </Box> */}
-                {/* <Box mt="1" lineHeight="tight">
-                    <Text noOfLines={2}>{movie.synopsis}</Text>
-                    <Text>Rent Price: ${movie.rentPrice}</Text>
-                    <Text>Buy Price: ${movie.buyPrice}</Text>
-                  </Box> */}
-                {/* </Box> */}
               </Box>
             </Link>
           </GridItem>

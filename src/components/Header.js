@@ -10,9 +10,7 @@ const Header = ({ onOpenLogin, onOpenRegister }) => (
                 <Image src="/myLogo.png" alt="Logo" h={50} />
             </Link>
             <Stack direction="row" spacing={4} ml={5} w="100%">
-                {/* <Box> */}
                 <NavigationBar onOpenLogin={onOpenLogin} onOpenRegister={onOpenRegister} w="100%" />
-                {/* </Box> */}
             </Stack>
             <Spacer />
         </Flex>

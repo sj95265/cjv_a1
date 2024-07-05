@@ -28,6 +28,10 @@ const RegisterModal = ({ isOpen, onClose }) => (
           <FormLabel>Password</FormLabel>
           <Input type="password" />
         </FormControl>
+        <FormControl mt={4}>
+          <FormLabel>Confirm Password</FormLabel>
+          <Input type="password" />
+        </FormControl>
       </ModalBody>
       <ModalFooter>
         <Button colorScheme="teal" mr={3} onClick={onClose}>

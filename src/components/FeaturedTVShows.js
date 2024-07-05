@@ -29,18 +29,6 @@ const FeaturedTVShows = () => {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   fetch('http://localhost:3001/tvShows')
-  //     .then(response => {
-  //       if (!response.ok) {
-  //         throw new Error('Network response was not ok');
-  //       }
-  //       return response.json();
-  //     })
-  //     .then(data => setTvShows(data))
-  //     .catch(error => console.error('Error fetching featured TV shows:', error));
-  // }, []);
-
   return (
     <Box p={4}>
       <Heading size="lg" mb={4}>Featured TV Shows</Heading>
@@ -50,18 +38,9 @@ const FeaturedTVShows = () => {
             <Link to={`/tvShows/${tvShow.id}`}>
               <Box borderWidth="1px" borderRadius="lg" overflow="hidden" h="100%">
                 <Image src={tvShow.smallPoster} alt={tvShow.title} w="100%" h="90%" objectFit="cover" />
-                {/* <Box p="6"> */}
-                {/* <Box d="flex" alignItems="baseline"> */}
                 <Text textAlign="center" noOfLines={1} fontWeight="semibold" fontSize="xl" lineHeight="short">
                   {tvShow.title}
                 </Text>
-                {/* </Box> */}
-                {/* <Box mt="1" lineHeight="tight">
-                    <Text>{tvShow.synopsis}</Text>
-                    <Text>Rent Price: ${tvShow.rentPrice}</Text>
-                    <Text>Buy Price: ${tvShow.buyPrice}</Text>
-                  </Box>
-                </Box> */}
               </Box>
             </Link>
           </GridItem>
