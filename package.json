@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"npm run json-server\" \"react-scripts build\""
+    "dev": "concurrently \"npm run json-server\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
