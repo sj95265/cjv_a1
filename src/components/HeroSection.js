@@ -20,10 +20,10 @@ const HeroSection = () => {
     arrows: false,
     pauseOnHover: false,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    afterChange: (current) => setCurrentSlide(current), // Update current slide index
+    afterChange: (current) => setCurrentSlide(current),
     customPaging: function (i) {
       return (
         <Box
