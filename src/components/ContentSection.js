@@ -11,7 +11,7 @@ const ContentSection = () => (
                     h="100%"
                     w="100%"
                     objectFit="contain"
-                    src="https://fullsuitcase.com/wp-content/uploads/2016/10/The-Ultimate-List-of-Best-Travel-Movies-1.jpg.webp"
+                    src="https://dims.apnews.com/dims4/default/0a73f78/2147483647/strip/true/crop/3000x1688+0+156/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fc0%2Fd7%2F8952bf0805373c77af588787a7fd%2Fca0bfc7687ac42fa8f4c10c46d5623ad"
                     alt="pic"
                 />
             </GridItem>
