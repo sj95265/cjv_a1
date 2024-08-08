@@ -6,25 +6,16 @@ const FeaturedTVShows = () => {
   const [tvShows, setTvShows] = useState([]);
 
   useEffect(() => {
-    const fetchData = () => {
-      const ids = [1, 2, 3, 4, 5];
-      const promises = ids.map(id =>
-        fetch(`http://localhost:3001/tvShows/?id=${id}`)
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(`Request for tvShow ${id} failed`);
-            }
-            return response.json();
-          })
-      );
-      Promise.all(promises)
-        .then(tvShowData => {
-          const tvShows = tvShowData.map(data => data[0]);
-          setTvShows(tvShows);
-        })
-        .catch(error => {
-          console.error('Error fetching movies:', error);
-        });
+    const fetchData = async () => {
+
+      
+      try {
+        const featuredShows = await fetch(`${process.env.REACT_APP_API_URL}/tvshows/featured`);
+        const showData = await featuredShows.json();
+        setTvShows(showData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
     fetchData();
   }, []);

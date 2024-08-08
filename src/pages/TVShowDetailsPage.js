@@ -6,22 +6,19 @@ const TVShowDetailsPage = () => {
   const { id } = useParams();
   const [tvShow, setTVShow] = useState(null);
 
+  
   useEffect(() => {
-    fetch(`http://localhost:3001/tvShows/?id=${id}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (Array.isArray(data) && data.length > 0) {
-          setTVShow(data[0]);
-        } else {
-          throw new Error('TVShow not found');
-        }
-      })
-      .catch(error => console.error('Error fetching TV show:', error));
+    const fetchShow = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/tvshows/${id}`);
+        const data = await response.json();
+        setTVShow(data);
+      } catch (error) {
+        console.error('Error fetching TVShows:', error);
+      }
+    };
+
+    fetchShow();
   }, [id]);
 
   if (!tvShow) {

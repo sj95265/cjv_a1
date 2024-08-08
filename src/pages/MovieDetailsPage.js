@@ -7,21 +7,17 @@ const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/movies/?id=${id}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (Array.isArray(data) && data.length > 0) {
-          setMovie(data[0]);
-        } else {
-          throw new Error('Movie not found');
-        }
-      })
-      .catch(error => console.error('Error fetching movie:', error));
+    const fetchMovie = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/movies/${id}`);
+        const data = await response.json();
+        setMovie(data);
+      } catch (error) {
+        console.error('Error fetching movie:', error);
+      }
+    };
+
+    fetchMovie();
   }, [id]);
 
   if (!movie) {

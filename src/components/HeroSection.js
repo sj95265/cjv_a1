@@ -1,18 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Box, Heading, Image } from '@chakra-ui/react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const HeroSection = () => {
-  const [heroes, setHeroes] = useState([]);
-  const [currentSlide, setCurrentSlide] = useState(0); // State to track current slide index
+  const heroes = [
+    {
+      "id": 1,
+      "poster": "https://hips.hearstapps.com/hmg-prod/images/best-movies-1624472751.jpg"
+    },
+    {
+      "id": 2,
+      "poster": "https://images.squarespace-cdn.com/content/v1/5bfff88170e802806d993220/56245f24-f874-4709-93bf-6702b54e5d13/image-asset.png"
+    },
+    {
+      "id": 3,
+      "poster": "https://disappointmentmedia.com/uploads/4/7/9/1/47919861/disappointment-media-s-top-10-films-of-2021-so-far_orig.jpg"
+    },
+    {
+      "id": 4,
+      "poster": "https://mma.prnewswire.com/media/1731649/Parrot_Analytics_Global_TV_Demand_Awards.jpg?p=twitter"
+    },
+    {
+      "id": 5,
+      "poster": "https://hips.hearstapps.com/hmg-prod/images/besttv2021-longformlede-1638977191.jpeg"
+    }
+  ];
 
-  useEffect(() => {
-    fetch('http://localhost:3001/heroes')
-      .then(response => response.json())
-      .then(data => setHeroes(data));
-  }, []);
+  const [currentSlide, setCurrentSlide] = useState(0); // State to track current slide index
 
   const settings = {
     dots: true,
